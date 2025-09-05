@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ek Tarfa Chahat – Part 1</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Cinzel', serif;
+      background: linear-gradient(to bottom, #0d0d0d, #1a1a2e);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Falling petals */
+    .petal {
+      position: fixed;
+      top: -10vh;
+      background: radial-gradient(circle at 30% 30%, #ff5f8d, #ff2d55);
+      border-radius: 150% 0 150% 0;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+
+    /* Top bar */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      backdrop-filter: blur(15px);
+      background: rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      z-index: 1000;
+    }
+    .topbar .left {
+      font-size: 18px;
+      color: #fff;
+    }
+    .socials {
+      display: flex;
+      gap: 15px;
+    }
+    .circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.1);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .circle:hover {
+      transform: scale(1.1);
+      background: rgba(255,255,255,0.3);
+    }
+    .circle img {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Main content */
+    .container {
+      max-width: 800px;
+      margin: 120px auto 50px auto;
+      padding: 30px;
+      backdrop-filter: blur(20px);
+      background: rgba(255,255,255,0.08);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      line-height: 1.8;
+      font-size: 18px;
+      position: relative;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+    .tab {
+      padding: 10px 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.1);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .tab.active {
+      background: rgba(255,255,255,0.3);
+    }
+    .tab.locked {
+      opacity: 0.5;
+      cursor: not-allowed;
+      position: relative;
+    }
+    .tab.locked::after {
+      content: '🔒';
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="left">Words by Akshat 🥀✍️</div>
+    <div class="socials">
+      <a href="https://www.instagram.com/akshat_singh_______/" target="_blank" class="circle">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+      <a href="https://t.me/Itz_Akshat_Singh" target="_blank" class="circle">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+      </a>
+      <a href="https://t.me/Khwabon_Ki_Kitaab" target="_blank" class="circle">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Channel">
+      </a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tabs">
+      <div class="tab active">Part 1</div>
+      <div class="tab locked">Part 2</div>
+    </div>
+    <div class="content">
+      <h2>“Ek Tarfa Chahat” – Part 1 (Deep Version)</h2>
+      <p>🌙 Zindagi ek ajeeb silsila hai…<br>
+      jo hum chahte hain, zaruri nahi hamesha humein mile,<br>
+      aur jo humein milta hai, zaruri nahi wo humari chahat ho.<br>
+      Par sabse khoobsurat ehsaas tab paida hota hai,<br>
+      jab hum apni chahat ko uski khushi ke liye qurbaan kar dete hain.</p>
+
+      <p>✨ Log kehte hain ek tarfa mohabbat khoobsurat hoti hai…<br>
+      Haan, hoti hai.<br>
+      Par ek raaz hai—<br>
+      ek tarfa chahat usse bhi zyada khoobsurat hoti hai.</p>
+
+      <p>💫 Mohabbat mein hum mangte hain—<br>
+      ki wo bhi humein chahe, humein paaye, humari ho jaye…<br>
+      Par chahat mein sirf ek dua hoti hai—<br>
+      ki wo hamesha muskuraye,<br>
+      chahe uski muskaan ke peeche humara dard kyun na chhup jaye.</p>
+
+      <p>🌌 Ek tarfa mohabbat mein apne armaan hote hain,<br>
+      par ek tarfa chahat mein sirf uski khushi hoti hai.<br>
+      Aur yahi farq usse paak banata hai.</p>
+
+      <p>🌺 Socho…<br>
+      jab tum usse mile the, tumhe khud nahi pata tha<br>
+      ki ek din tumhara dil uske liye dhadkega.<br>
+      To phir aaj kyun dard ho raha hai<br>
+      agar wo kisi aur ke saath khush hai?<br>
+      Tumhari chahat to uski khushi thi na…<br>
+      phir chahe wo tumse judi ho, ya tumse juda.</p>
+
+      <p>🌷 Sachi chahat wahi hai—<br>
+      jo chup rahe, par kabhi kam na ho.<br>
+      Jo apne jazbaat ka izhar na kare,<br>
+      sirf duaon mein uska zikr kare.<br>
+      Aur jab zarurat pade,<br>
+      to apne dil ke tukde kar ke bhi,<br>
+      uske raaste mein phool bicha de.</p>
+
+      <p>🌒 Kabhi kabhi kuch jazbaat chhupane padte hain…<br>
+      kyunki kuch sachaiyan izhar se zyada,<br>
+      khamoshi mein khoobsurat lagti hain.<br>
+      Aur wahi khamoshi, ek tarfa chahat ko<br>
+      ek adhoori si, par sabse behtareen dastaan banati hai.</p>
+
+      <p>🌙 Ye sirf Part 1 hai…<br>
+      Agla part tabhi aayega,<br>
+      jab dil phir se lafzon ke bojh se halka hona chahega,<br>
+      aur khud se baat karne ke liye kagaz ka sahara lega.<br>
+      Tab tak… ek shukriya,<br>
+      ki tumne meri is adhoori si kahani ke pehle panne ko mehsoos kiya. ✨</p>
+      <p>
+      <br>
+      BY:- Akshat Singh🥀✍️
+     </p>
+
+    </div>
+  </div>
+
+  <script>
+    // Generate falling petals
+    function createPetal(){
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      const size = Math.random() * 12 + 8;
+      petal.style.width = `${size}px`;
+      petal.style.height = `${size*1.2}px`;
+      petal.style.left = Math.random()*100 + 'vw';
+      petal.style.animationDuration = (Math.random()*5 + 5) + 's';
+      document.body.appendChild(petal);
+      setTimeout(()=> petal.remove(), 10000);
+    }
+    setInterval(createPetal, 500);
+  </script>
+</body>
+</html>
