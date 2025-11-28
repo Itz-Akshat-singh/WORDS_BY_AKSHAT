@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ek Tarfa Chahat – Part 1</title>
+  <title>Words By Akshat 🥀✍️</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
@@ -25,9 +25,7 @@
       animation: fall linear infinite;
     }
     @keyframes fall {
-      to {
-        transform: translateY(110vh) rotate(360deg);
-      }
+      to { transform: translateY(110vh) rotate(360deg); }
     }
 
     /* Top bar */
@@ -68,10 +66,7 @@
       transform: scale(1.1);
       background: rgba(255,255,255,0.3);
     }
-    .circle img {
-      width: 20px;
-      height: 20px;
-    }
+    .circle img { width: 20px; height: 20px; }
 
     /* Main content */
     .container {
@@ -101,18 +96,11 @@
       cursor: pointer;
       transition: 0.3s;
     }
-    .tab.active {
-      background: rgba(255,255,255,0.3);
-    }
-    .tab.locked {
-      opacity: 0.5;
-      cursor: not-allowed;
-      position: relative;
-    }
-    .tab.locked::after {
-      content: '🔒';
-      margin-left: 5px;
-    }
+    .tab.active { background: rgba(255,255,255,0.3); }
+
+    /* Hide inactive part */
+    .part { display: none; }
+    .part.active { display: block; }
   </style>
 </head>
 <body>
@@ -133,11 +121,14 @@
 
   <div class="container">
     <div class="tabs">
-      <div class="tab active">Part 1</div>
-      <div class="tab locked">Part 2 (coming soon)</div>
+      <div class="tab active" onclick="showPart('p1', this)">Part 1</div>
+      <div class="tab" onclick="showPart('p2', this)">Part 2</div>
     </div>
-    <div class="content">
-      <h2>“Ek Tarfa Chahat” – Part 1 (Deep Version)</h2>
+
+    <!-- PART 1 -->
+    <div id="p1" class="part active">
+      <h2>“Ek Tarfa Chahat”</h2>
+      <!-- (Your existing Part 1 text stays here) -->
       <p>🌙 Zindagi ek ajeeb silsila hai…<br>
       jo hum chahte hain, zaruri nahi hamesha humein mile,<br>
       aur jo humein milta hai, zaruri nahi wo humari chahat ho.<br>
@@ -193,23 +184,160 @@
      </p>
 
     </div>
+
+    <!-- PART 2 -->
+    <div id="p2" class="part">
+      <h2>🌙 “Khamoshi Ke Us Paar” – Part 2</h2>
+      <p>
+        <br>
+Us raat ka aasman 🌌 thehra hua tha,
+jaise apne hi zakhmon ko daba kar chup baitha ho…
+Sadak ki lamp-lights 💡 hawa mein hil rahi thi—
+jaise koi rooh hichkiyon mein doob rahi ho.<br>
+
+
+<br>
+Rehan ne apni purani diary 📓 seene se aur kas li.
+Uske panne saalon se ek bojh uthaaye baithe the—
+woh lafz,
+jo kabhi kisi ek ke liye likhe gaye the…
+kisi aisi ke liye
+jo ab uske naam se bhi door bhaagti thi 🕊️.<br>
+
+
+<br>
+Sheher ki bheed mein bhi Rehan ko lagta tha
+ke uske aaspaas bas ek hi khamoshi ghoom rahi hai—
+wo khamoshi
+jo sirf unko samajh aati hai
+jo kabhi kisi ke liye sab kuch ban gaye the…
+aur aaj usi ke liye kuch bhi nahi rahe. 💔<br>
+
+
+<br>
+Rehan pehle bohot bolta tha.
+Doston ko hassata 😄, ghar walon ko chidata,
+har ajnabi ko apne lehje se apna bana leta.
+Par ab?
+Uski zubaan jaise kahin tahkhane me bandh ho gayi ho—
+wo bas muskurane ka natak karta 🙂,
+aur raat ko apne kamre ke andhere me
+khud se ladta rehta 🕯️.<br>
+
+
+<br>
+Us kamre ki deewarein uska raaz jaanti thi—
+Rehan ne khud ko badal diya tha.
+Aadaten, lehje, waqt…
+sab kuch.
+Sirf ek insaan ke ek muskurahat ke liye 🌙.<br>
+
+
+<br>
+Par wo insaan…
+ab to uske paighaam dekhna bhi gunaah samajhti thi.
+Usne raaston par patthar chhupa diye the—
+Rehan jitna bhi sambhal kar chale,
+dard par pair pad hi jaata 🪨.<br>
+
+
+<br>
+Ek shaam, dhoop aur andhera dono aasman me lad rahe the 🌗.
+Rehan ne diary ka ek purana mukaam khola.
+Wahin likhe the woh lafz—
+jo kabhi zindagi the,
+aur ab uske liye kaanton jaisa bojh 🌾💢.<br>
+
+
+<br>
+“Kuch log door nahi jaate,
+bas nazar hata lete hain—
+aur yeh nazar hatna hi zahar hota hai.”<br>
+
+
+<br>
+Padte hi usne diary band kar di.
+Aankhon me fariyaad nahi thi,
+sirf ek thakan…
+jaise aansu bhi haar maan gaye ho 💧.<br>
+
+
+<br>
+Rehan sheher ki sabse unchi imaarat ke kinare jaa baitha 🏙️.
+Aasman se poochne laga—
+“Haarna isliye hota hai kya…
+kyunki jeet kabhi meri kismat me hoti hi nahi?”<br>
+
+
+<br>
+Hawa ne uske baal halki si chaal se hilaye 🌬️—
+jaise keh rahi ho:
+“Nahi Rehan…
+tum kisi se nahi haare.
+Tum bas us se mohabbat kar baithe
+jisse tumhari zaroorat kabhi thi hi nahi.”<br>
+
+
+<br>
+Us raat koi jawab nahi mila,
+sirf ek sakht haqiqat mili—
+kabhi kabhi log avoid nahi karte,
+wo sirf tumhari mohabbat ke bojh se
+khud ko bacha kar bhaag jaate hain 🕊️💭.<br>
+
+
+<br>
+Rehan ne diary band ki.
+Ek safha khatam ho gaya.
+Ek fasana ruk gaya.<br>
+
+
+<br>
+Par uski aankhon me ek halka sa ujaala reh gaya—
+jo keh raha tha:<br>
+
+
+<br>
+“Main toot gaya hoon…
+par iss baar main kisi ko dikhane nahi dunga.” 🌒<br>
+
+
+<br>
+Wo dheere se utha,
+aur chal diya…
+waise hi…
+khamosh,
+andar se khaali,
+par ab bhi zinda.💫<br>
+<br>
+      BY:- Akshat Singh🥀✍️
+      </br>
+</p>
+    </div>
   </div>
 
   <script>
-    // Generate falling petals
+    // petal effect
     function createPetal(){
-      const petal = document.createElement('div');
+      const petal=document.createElement('div');
       petal.classList.add('petal');
-      const size = Math.random() * 12 + 8;
-      petal.style.width = `${size}px`;
-      petal.style.height = `${size*1.2}px`;
-      petal.style.left = Math.random()*100 + 'vw';
-      petal.style.animationDuration = (Math.random()*5 + 5) + 's';
+      const size=Math.random()*12+8;
+      petal.style.width=`${size}px`;
+      petal.style.height=`${size*1.2}px`;
+      petal.style.left=Math.random()*100+'vw';
+      petal.style.animationDuration=(Math.random()*5+5)+'s';
       document.body.appendChild(petal);
-      setTimeout(()=> petal.remove(), 10000);
+      setTimeout(()=>petal.remove(),10000);
     }
-    setInterval(createPetal, 500);
+    setInterval(createPetal,500);
+
+    // tab switcher
+    function showPart(id, el){
+      document.querySelectorAll('.part').forEach(p=>p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+      el.classList.add('active');
+    }
   </script>
 </body>
 </html>
-
