@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Words By Akshat 🥀✍️</title>
+  <title>Words by Akshat 🥀✍️</title>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
     body {
       margin: 0;
-      font-family: 'Cinzel', serif;
       background: linear-gradient(to bottom, #0d0d0d, #1a1a2e);
-      color: #fff;
+      font-family: 'Cinzel', serif;
+      color: white;
       overflow-x: hidden;
     }
 
@@ -23,322 +24,104 @@
       border-radius: 150% 0 150% 0;
       opacity: 0.8;
       animation: fall linear infinite;
+      z-index: 0;
     }
     @keyframes fall {
       to { transform: translateY(110vh) rotate(360deg); }
     }
 
-    /* Top bar */
-    .topbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 30px;
-      backdrop-filter: blur(15px);
-      background: rgba(255,255,255,0.05);
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-      z-index: 1000;
-    }
-    .topbar .left {
-      font-size: 18px;
-      color: #fff;
-    }
-    .socials {
-      display: flex;
-      gap: 15px;
-    }
-    .circle {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      backdrop-filter: blur(10px);
-      background: rgba(255,255,255,0.1);
-      transition: transform 0.3s, background 0.3s;
-    }
-    .circle:hover {
-      transform: scale(1.1);
-      background: rgba(255,255,255,0.3);
-    }
-    .circle img { width: 20px; height: 20px; }
-
-    /* Main content */
-    .container {
-      max-width: 800px;
-      margin: 120px auto 50px auto;
-      padding: 30px;
-      backdrop-filter: blur(20px);
-      background: rgba(255,255,255,0.08);
-      border-radius: 20px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-      line-height: 1.8;
-      font-size: 18px;
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 40px 10px;
+      font-size: 36px;
+      letter-spacing: 3px;
+      z-index: 10;
       position: relative;
+      color: #ffccd5;
     }
 
-    /* Tabs */
-    .tabs {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-      gap: 20px;
+    /* Cards container */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      position: relative;
+      z-index: 10;
     }
-    .tab {
-      padding: 10px 20px;
+
+    /* Glass Cards */
+    .card {
+      background: rgba(255, 255, 255, 0.08);
       border-radius: 20px;
-      background: rgba(255,255,255,0.1);
-      cursor: pointer;
+      padding: 25px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      transition: 0.3s;
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+    .card:hover {
+      transform: translateY(-7px);
+      background: rgba(255,255,255,0.15);
+    }
+
+    .card h2 {
+      color: #ffc8dd;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 12px;
+      text-decoration: none;
+      color: white;
       transition: 0.3s;
     }
-    .tab.active { background: rgba(255,255,255,0.3); }
-
-    /* Hide inactive part */
-    .part { display: none; }
-    .part.active { display: block; }
+    .btn:hover {
+      background: rgba(255,255,255,0.35);
+    }
   </style>
 </head>
+
 <body>
-  <div class="topbar">
-    <div class="left">Words by Akshat 🥀✍️</div>
-    <div class="socials">
-      <a href="https://www.instagram.com/akshat_singh_______/" target="_blank" class="circle">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-      </a>
-      <a href="https://t.me/Itz_Akshat_Singh" target="_blank" class="circle">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
-      </a>
-      <a href="https://t.me/Khwabon_Ki_Kitaab" target="_blank" class="circle">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Channel">
-      </a>
-    </div>
-  </div>
+
+  <div class="header">Words by Akshat 🥀✍️</div>
 
   <div class="container">
-    <div class="tabs">
-      <div class="tab active" onclick="showPart('p1', this)">Part 1</div>
-      <div class="tab" onclick="showPart('p2', this)">Part 2</div>
+    <div class="card">
+      <h2>Part 1 – Ek Tarfa Chahat</h2>
+      <p>“Zindagi ek ajeeb silsila hai… jo hum chahte hain, zaruri nahi hume mile...”</p>
+      <a class="btn" href="part1.html">Read Full →</a>
     </div>
 
-    <!-- PART 1 -->
-    <div id="p1" class="part active">
-      <h2>“Ek Tarfa Chahat”</h2>
-      <!-- (Your existing Part 1 text stays here) -->
-      <p>🌙 Zindagi ek ajeeb silsila hai…<br>
-      jo hum chahte hain, zaruri nahi hamesha humein mile,<br>
-      aur jo humein milta hai, zaruri nahi wo humari chahat ho.<br>
-      Par sabse khoobsurat ehsaas tab paida hota hai,<br>
-      jab hum apni chahat ko uski khushi ke liye qurbaan kar dete hain.</p>
-
-      <p>✨ Log kehte hain ek tarfa mohabbat khoobsurat hoti hai…<br>
-      Haan, hoti hai.<br>
-      Par ek raaz hai—<br>
-      ek tarfa chahat usse bhi zyada khoobsurat hoti hai.</p>
-
-      <p>💫 Mohabbat mein hum mangte hain—<br>
-      ki wo bhi humein chahe, humein paaye, humari ho jaye…<br>
-      Par chahat mein sirf ek dua hoti hai—<br>
-      ki wo hamesha muskuraye,<br>
-      chahe uski muskaan ke peeche humara dard kyun na chhup jaye.</p>
-
-      <p>🌌 Ek tarfa mohabbat mein apne armaan hote hain,<br>
-      par ek tarfa chahat mein sirf uski khushi hoti hai.<br>
-      Aur yahi farq usse paak banata hai.</p>
-
-      <p>🌺 Socho…<br>
-      jab tum usse mile the, tumhe khud nahi pata tha<br>
-      ki ek din tumhara dil uske liye dhadkega.<br>
-      To phir aaj kyun dard ho raha hai<br>
-      agar wo kisi aur ke saath khush hai?<br>
-      Tumhari chahat to uski khushi thi na…<br>
-      phir chahe wo tumse judi ho, ya tumse juda.</p>
-
-      <p>🌷 Sachi chahat wahi hai—<br>
-      jo chup rahe, par kabhi kam na ho.<br>
-      Jo apne jazbaat ka izhar na kare,<br>
-      sirf duaon mein uska zikr kare.<br>
-      Aur jab zarurat pade,<br>
-      to apne dil ke tukde kar ke bhi,<br>
-      uske raaste mein phool bicha de.</p>
-
-      <p>🌒 Kabhi kabhi kuch jazbaat chhupane padte hain…<br>
-      kyunki kuch sachaiyan izhar se zyada,<br>
-      khamoshi mein khoobsurat lagti hain.<br>
-      Aur wahi khamoshi, ek tarfa chahat ko<br>
-      ek adhoori si, par sabse behtareen dastaan banati hai.</p>
-
-      <p>🌙 Ye sirf Part 1 hai…<br>
-      Agla part tabhi aayega,<br>
-      jab dil phir se lafzon ke bojh se halka hona chahega,<br>
-      aur khud se baat karne ke liye kagaz ka sahara lega.<br>
-      Tab tak… ek shukriya,<br>
-      ki tumne meri is adhoori si kahani ke pehle panne ko mehsoos kiya. ✨</p>
-      <p>
-      <br>
-      BY:- Akshat Singh🥀✍️
-     </p>
-
-    </div>
-
-    <!-- PART 2 -->
-    <div id="p2" class="part">
-      <h2>🌙 “Khamoshi Ke Us Paar” – Part 2</h2>
-      <p>
-        <br>
-Us raat ka aasman 🌌 thehra hua tha,
-jaise apne hi zakhmon ko daba kar chup baitha ho…
-Sadak ki lamp-lights 💡 hawa mein hil rahi thi—
-jaise koi rooh hichkiyon mein doob rahi ho.<br>
-
-
-<br>
-Rehan ne apni purani diary 📓 seene se aur kas li.
-Uske panne saalon se ek bojh uthaaye baithe the—
-woh lafz,
-jo kabhi kisi ek ke liye likhe gaye the…
-kisi aisi ke liye
-jo ab uske naam se bhi door bhaagti thi 🕊️.<br>
-
-
-<br>
-Sheher ki bheed mein bhi Rehan ko lagta tha
-ke uske aaspaas bas ek hi khamoshi ghoom rahi hai—
-wo khamoshi
-jo sirf unko samajh aati hai
-jo kabhi kisi ke liye sab kuch ban gaye the…
-aur aaj usi ke liye kuch bhi nahi rahe. 💔<br>
-
-
-<br>
-Rehan pehle bohot bolta tha.
-Doston ko hassata 😄, ghar walon ko chidata,
-har ajnabi ko apne lehje se apna bana leta.
-Par ab?
-Uski zubaan jaise kahin tahkhane me bandh ho gayi ho—
-wo bas muskurane ka natak karta 🙂,
-aur raat ko apne kamre ke andhere me
-khud se ladta rehta 🕯️.<br>
-
-
-<br>
-Us kamre ki deewarein uska raaz jaanti thi—
-Rehan ne khud ko badal diya tha.
-Aadaten, lehje, waqt…
-sab kuch.
-Sirf ek insaan ke ek muskurahat ke liye 🌙.<br>
-
-
-<br>
-Par wo insaan…
-ab to uske paighaam dekhna bhi gunaah samajhti thi.
-Usne raaston par patthar chhupa diye the—
-Rehan jitna bhi sambhal kar chale,
-dard par pair pad hi jaata 🪨.<br>
-
-
-<br>
-Ek shaam, dhoop aur andhera dono aasman me lad rahe the 🌗.
-Rehan ne diary ka ek purana mukaam khola.
-Wahin likhe the woh lafz—
-jo kabhi zindagi the,
-aur ab uske liye kaanton jaisa bojh 🌾💢.<br>
-
-
-<br>
-“Kuch log door nahi jaate,
-bas nazar hata lete hain—
-aur yeh nazar hatna hi zahar hota hai.”<br>
-
-
-<br>
-Padte hi usne diary band kar di.
-Aankhon me fariyaad nahi thi,
-sirf ek thakan…
-jaise aansu bhi haar maan gaye ho 💧.<br>
-
-
-<br>
-Rehan sheher ki sabse unchi imaarat ke kinare jaa baitha 🏙️.
-Aasman se poochne laga—
-“Haarna isliye hota hai kya…
-kyunki jeet kabhi meri kismat me hoti hi nahi?”<br>
-
-
-<br>
-Hawa ne uske baal halki si chaal se hilaye 🌬️—
-jaise keh rahi ho:
-“Nahi Rehan…
-tum kisi se nahi haare.
-Tum bas us se mohabbat kar baithe
-jisse tumhari zaroorat kabhi thi hi nahi.”<br>
-
-
-<br>
-Us raat koi jawab nahi mila,
-sirf ek sakht haqiqat mili—
-kabhi kabhi log taala nahi karte,
-wo sirf tumhari mohabbat ke bojh se
-khud ko bacha kar bhaag jaate hain 🕊️💭.<br>
-
-
-<br>
-Rehan ne diary band ki.
-Ek safha khatam ho gaya.
-Ek fasana ruk gaya.<br>
-
-
-<br>
-Par uski aankhon me ek halka sa ujaala reh gaya—
-jo keh raha tha:<br>
-
-
-<br>
-“Main toot gaya hoon…
-par iss baar main kisi ko dikhane nahi dunga.” 🌒<br>
-
-
-<br>
-Wo dheere se utha,
-aur chal diya…
-waise hi…
-khamosh,
-andar se khaali,
-par ab bhi zinda.💫<br>
-<br>
-      BY:- Akshat Singh🥀✍️
-      </br>
-</p>
+    <div class="card">
+      <h2>Part 2 – Khamoshi Ke Us Paar</h2>
+      <p>“Rehan ne apni purani diary seene se kas li… kuch lafz bojh ban gaye the...”</p>
+      <a class="btn" href="part2.html">Read Full →</a>
     </div>
   </div>
 
   <script>
-    // petal effect
+    // Falling petals
     function createPetal(){
       const petal=document.createElement('div');
       petal.classList.add('petal');
       const size=Math.random()*12+8;
       petal.style.width=`${size}px`;
-      petal.style.height=`${size*1.2}px`;
+      petal.style.height=`${size*1.3}px`;
       petal.style.left=Math.random()*100+'vw';
-      petal.style.animationDuration=(Math.random()*5+5)+'s';
+      petal.style.animationDuration=(Math.random()*6+6)+'s';
       document.body.appendChild(petal);
-      setTimeout(()=>petal.remove(),10000);
+      setTimeout(()=>petal.remove(),15000);
     }
     setInterval(createPetal,500);
-
-    // tab switcher
-    function showPart(id, el){
-      document.querySelectorAll('.part').forEach(p=>p.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-      el.classList.add('active');
-    }
   </script>
+
 </body>
 </html>
-
