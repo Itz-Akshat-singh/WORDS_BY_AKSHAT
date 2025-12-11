@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Part 1 – Ek Tarfa Chahat</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #0d0d0d, #1a1a2e);
+      color: white;
+      font-family: 'Cinzel', serif;
+      overflow-x: hidden;
+    }
+
+    /* Falling petals */
+    .petal {
+      position: fixed;
+      top: -10vh;
+      background: radial-gradient(circle at 30% 30%, #ff5f8d, #ff2d55);
+      border-radius: 150% 0 150% 0;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      to { transform: translateY(110vh) rotate(360deg); }
+    }
+
+    /* Content box */
+    .box {
+      max-width: 800px;
+      margin: 120px auto;
+      padding: 40px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 20px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,0.2);
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+    a.back {
+      text-decoration: none;
+      color: #ffc8dd;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+
+    <a class="back" href="index.html">← Back</a>
+    <h1>“Ek Tarfa Chahat”</h1>
+
+    <!-- Yaha aapka pura Part 1 content paste kar do EXACTLY as it is -->
+    <p>🌙 Zindagi ek ajeeb silsila hai…<br>
+      jo hum chahte hain, zaruri nahi hamesha humein mile,<br>
+      aur jo humein milta hai, zaruri nahi wo humari chahat ho.<br>
+      Par sabse khoobsurat ehsaas tab paida hota hai,<br>
+      jab hum apni chahat ko uski khushi ke liye qurbaan kar dete hain.</p>
+
+      <p>✨ Log kehte hain ek tarfa mohabbat khoobsurat hoti hai…<br>
+      Haan, hoti hai.<br>
+      Par ek raaz hai—<br>
+      ek tarfa chahat usse bhi zyada khoobsurat hoti hai.</p>
+
+      <p>💫 Mohabbat mein hum mangte hain—<br>
+      ki wo bhi humein chahe, humein paaye, humari ho jaye…<br>
+      Par chahat mein sirf ek dua hoti hai—<br>
+      ki wo hamesha muskuraye,<br>
+      chahe uski muskaan ke peeche humara dard kyun na chhup jaye.</p>
+
+      <p>🌌 Ek tarfa mohabbat mein apne armaan hote hain,<br>
+      par ek tarfa chahat mein sirf uski khushi hoti hai.<br>
+      Aur yahi farq usse paak banata hai.</p>
+
+      <p>🌺 Socho…<br>
+      jab tum usse mile the, tumhe khud nahi pata tha<br>
+      ki ek din tumhara dil uske liye dhadkega.<br>
+      To phir aaj kyun dard ho raha hai<br>
+      agar wo kisi aur ke saath khush hai?<br>
+      Tumhari chahat to uski khushi thi na…<br>
+      phir chahe wo tumse judi ho, ya tumse juda.</p>
+
+      <p>🌷 Sachi chahat wahi hai—<br>
+      jo chup rahe, par kabhi kam na ho.<br>
+      Jo apne jazbaat ka izhar na kare,<br>
+      sirf duaon mein uska zikr kare.<br>
+      Aur jab zarurat pade,<br>
+      to apne dil ke tukde kar ke bhi,<br>
+      uske raaste mein phool bicha de.</p>
+
+      <p>🌒 Kabhi kabhi kuch jazbaat chhupane padte hain…<br>
+      kyunki kuch sachaiyan izhar se zyada,<br>
+      khamoshi mein khoobsurat lagti hain.<br>
+      Aur wahi khamoshi, ek tarfa chahat ko<br>
+      ek adhoori si, par sabse behtareen dastaan banati hai.</p>
+
+      <p>🌙 Ye sirf Part 1 hai…<br>
+      Agla part tabhi aayega,<br>
+      jab dil phir se lafzon ke bojh se halka hona chahega,<br>
+      aur khud se baat karne ke liye kagaz ka sahara lega.<br>
+      Tab tak… ek shukriya,<br>
+      ki tumne meri is adhoori si kahani ke pehle panne ko mehsoos kiya. ✨</p>
+      <p>
+      <br>
+      BY:- Akshat Singh🥀✍️
+     </p>
+
+
+  </div>
+
+  <script>
+    function createPetal(){
+      const petal=document.createElement('div');
+      petal.classList.add('petal');
+      const size=Math.random()*12+8;
+      petal.style.width=`${size}px`;
+      petal.style.height=`${size*1.3}px`;
+      petal.style.left=Math.random()*100+'vw';
+      petal.style.animationDuration=(Math.random()*6+6)+'s';
+      document.body.appendChild(petal);
+      setTimeout(()=>petal.remove(),15000);
+    }
+    setInterval(createPetal,500);
+  </script>
+
+</body>
+</html>

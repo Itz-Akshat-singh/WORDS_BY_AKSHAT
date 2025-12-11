@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Part 2 – Khamoshi Ke Us Paar</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #0d0d0d, #1a1a2e);
+      color: white;
+      font-family: 'Cinzel', serif;
+      overflow-x: hidden;
+    }
+
+    /* Falling petals */
+    .petal {
+      position: fixed;
+      top: -10vh;
+      background: radial-gradient(circle at 30% 30%, #ff5f8d, #ff2d55);
+      border-radius: 150% 0 150% 0;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      to { transform: translateY(110vh) rotate(360deg); }
+    }
+
+    /* Content box */
+    .box {
+      max-width: 800px;
+      margin: 120px auto;
+      padding: 40px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 20px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,0.2);
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+    a.back {
+      text-decoration: none;
+      color: #ffc8dd;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+
+    <a class="back" href="index.html">← Back</a>
+    <h1>“Khamoshi Ke Us Paar”</h1>
+
+    <!-- Yaha aapka pura Part 1 content paste kar do EXACTLY as it is -->
+    <p>
+        <br>
+Us raat ka aasman 🌌 thehra hua tha,
+jaise apne hi zakhmon ko daba kar chup baitha ho…
+Sadak ki lamp-lights 💡 hawa mein hil rahi thi—
+jaise koi rooh hichkiyon mein doob rahi ho.<br>
+
+
+<br>
+Rehan ne apni purani diary 📓 seene se aur kas li.
+Uske panne saalon se ek bojh uthaaye baithe the—
+woh lafz,
+jo kabhi kisi ek ke liye likhe gaye the…
+kisi aisi ke liye
+jo ab uske naam se bhi door bhaagti thi 🕊️.<br>
+
+
+<br>
+Sheher ki bheed mein bhi Rehan ko lagta tha
+ke uske aaspaas bas ek hi khamoshi ghoom rahi hai—
+wo khamoshi
+jo sirf unko samajh aati hai
+jo kabhi kisi ke liye sab kuch ban gaye the…
+aur aaj usi ke liye kuch bhi nahi rahe. 💔<br>
+
+
+<br>
+Rehan pehle bohot bolta tha.
+Doston ko hassata 😄, ghar walon ko chidata,
+har ajnabi ko apne lehje se apna bana leta.
+Par ab?
+Uski zubaan jaise kahin tahkhane me bandh ho gayi ho—
+wo bas muskurane ka natak karta 🙂,
+aur raat ko apne kamre ke andhere me
+khud se ladta rehta 🕯️.<br>
+
+
+<br>
+Us kamre ki deewarein uska raaz jaanti thi—
+Rehan ne khud ko badal diya tha.
+Aadaten, lehje, waqt…
+sab kuch.
+Sirf ek insaan ke ek muskurahat ke liye 🌙.<br>
+
+
+<br>
+Par wo insaan…
+ab to uske paighaam dekhna bhi gunaah samajhti thi.
+Usne raaston par patthar chhupa diye the—
+Rehan jitna bhi sambhal kar chale,
+dard par pair pad hi jaata 🪨.<br>
+
+
+<br>
+Ek shaam, dhoop aur andhera dono aasman me lad rahe the 🌗.
+Rehan ne diary ka ek purana mukaam khola.
+Wahin likhe the woh lafz—
+jo kabhi zindagi the,
+aur ab uske liye kaanton jaisa bojh 🌾💢.<br>
+
+
+<br>
+“Kuch log door nahi jaate,
+bas nazar hata lete hain—
+aur yeh nazar hatna hi zahar hota hai.”<br>
+
+
+<br>
+Padte hi usne diary band kar di.
+Aankhon me fariyaad nahi thi,
+sirf ek thakan…
+jaise aansu bhi haar maan gaye ho 💧.<br>
+
+
+<br>
+Rehan sheher ki sabse unchi imaarat ke kinare jaa baitha 🏙️.
+Aasman se poochne laga—
+“Haarna isliye hota hai kya…
+kyunki jeet kabhi meri kismat me hoti hi nahi?”<br>
+
+
+<br>
+Hawa ne uske baal halki si chaal se hilaye 🌬️—
+jaise keh rahi ho:
+“Nahi Rehan…
+tum kisi se nahi haare.
+Tum bas us se mohabbat kar baithe
+jisse tumhari zaroorat kabhi thi hi nahi.”<br>
+
+
+<br>
+Us raat koi jawab nahi mila,
+sirf ek sakht haqiqat mili—
+kabhi kabhi log taala nahi karte,
+wo sirf tumhari mohabbat ke bojh se
+khud ko bacha kar bhaag jaate hain 🕊️💭.<br>
+
+
+<br>
+Rehan ne diary band ki.
+Ek safha khatam ho gaya.
+Ek fasana ruk gaya.<br>
+
+
+<br>
+Par uski aankhon me ek halka sa ujaala reh gaya—
+jo keh raha tha:<br>
+
+
+<br>
+“Main toot gaya hoon…
+par iss baar main kisi ko dikhane nahi dunga.” 🌒<br>
+
+
+<br>
+Wo dheere se utha,
+aur chal diya…
+waise hi…
+khamosh,
+andar se khaali,
+par ab bhi zinda.💫<br>
+<br>
+      BY:- Akshat Singh🥀✍️
+      </br>
+</p>
+    </div>
+
+
+  </div>
+
+  <script>
+    function createPetal(){
+      const petal=document.createElement('div');
+      petal.classList.add('petal');
+      const size=Math.random()*12+8;
+      petal.style.width=`${size}px`;
+      petal.style.height=`${size*1.3}px`;
+      petal.style.left=Math.random()*100+'vw';
+      petal.style.animationDuration=(Math.random()*6+6)+'s';
+      document.body.appendChild(petal);
+      setTimeout(()=>petal.remove(),15000);
+    }
+    setInterval(createPetal,500);
+  </script>
+
+</body>
+</html>
